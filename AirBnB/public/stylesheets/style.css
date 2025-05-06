@@ -6,3 +6,85 @@ body {
 a {
   color: #00B7FF;
 }
+
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+.container {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+header,
+footer {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rebeccapurple;
+  color: whitesmoke;
+  text-align: center;
+  grid-area: footer;
+}
+aside {
+  grid-area: sidebar;
+  border-right: 1px solid rebeccapurple;
+}
+
+header{
+  grid-area: header;
+}
+main {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: 4fr 3fr 3fr;
+  gap: inherit;
+}
+
+article {
+  padding: 10px;
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+}
+
