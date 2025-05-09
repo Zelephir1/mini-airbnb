@@ -209,7 +209,7 @@ i {
   padding-top: 20px;
 }
 
-.video-container {
+.section-logement {
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -220,12 +220,12 @@ i {
   margin-bottom: 5px;
 }
 
-.video-description {
+.offre-logement {
   display: flex;
   flex-direction: row;
 }
 
-.channel-dp-container-2 {
+.note-logement {
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -234,32 +234,32 @@ i {
 }
 
 
-.video-details {
+.details-logement {
   width: 200px;
   margin-top: 3px;
   margin-left: 10px;
   justify-self: flex-end;
 }
 
-.video-title {
+.titre-logement {
   font-weight: bold;
   text-decoration: none;
   color: black;
   margin-bottom: 5px;
 }
 
-.channel-name {
+.hote-logement {
   color: rgb(99, 95, 94);
   text-decoration: none;
   display: block;
   margin-top: 5px;
 }
 
-.channel-name:hover {
+.hote-logement:hover {
   color: rgb(53, 50, 49);
 }
 
-.views {
+.disponibilite-logement {
   color: rgb(99, 95, 94);
   text-decoration: none;
 }
@@ -270,8 +270,10 @@ i {
   transform: translateY(-3px);
 }
 
-.time {
+.prix-logement {
   text-decoration: none;
+  display: block;
+  margin-top: 5px;
   color: rgb(99, 95, 94);
 }
 
