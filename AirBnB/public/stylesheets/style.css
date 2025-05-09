@@ -210,8 +210,16 @@ i {
 }
 
 .section-logement {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  
+}
+
+.logement {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .images {
