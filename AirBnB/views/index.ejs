@@ -33,17 +33,174 @@
         <label>Prix max :</label>
         <input type="number" name="prixMax" placeholder="Ex : 300">
 
-
         <label>Type :</label>
         <select name="type">
             <option value="">Tous</option>
             <option value="studio">Studio</option>
             <option value="villa">Villa</option>
+            <option value="maison">Maison</option>
+            <option value="chateau">Chateau</option>
+            <option value="forteresse">Forteresse</option>
+            <option value="palais">Palais</option>
+            <option value="hotel">Hotel</option>
+            <option value="tour">Tour</option>
         </select>
 
-        <button type="submit">Filtrer</button>
-    </form>
+        <label>Chambres et lits :</label>
+        <label>Chambres :</label>
+        <select name="Chambres">
+          <option value="">Tout</option>
+          <option value="1">1+</option>
+          <option value="2">2+</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+          <option value="5">5+</option>
+          <option value="6">6+</option>
+          <option value="7">7+</option>
+          <option value="8">8+</option>
+        </select>
 
+        <label>Lits :</label>
+        <select name="Lits">
+          <option value="">Tout</option>
+          <option value="1">1+</option>
+          <option value="2">2+</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+          <option value="5">5+</option>
+          <option value="6">6+</option>
+          <option value="7">7+</option>
+          <option value="8">8+</option>
+        </select>
+
+        <label>Salle de bain :</label>
+        <select name="Salle_de_bain">
+          <option value="">Tout</option>
+          <option value="1">1+</option>
+          <option value="2">2+</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+          <option value="5">5+</option>
+          <option value="6">6+</option>
+          <option value="7">7+</option>
+          <option value="8">8+</option>
+        </select>
+
+        <label>Equipements :</label>
+
+        <div class="dropdown">
+          <label>Produits et service de base :</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Wifi"> Wifi</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Cuisine"> Cuisine</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Lave-linge"> Lave-linge</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Sèche linge"> Sèche linge</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Climatisation"> Climatisation</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Chauffage"> Chauffage</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Espace de travail dédié"> Espace de travail dédié</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Télévision"> Télévision</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Sèche-cheveux"> Sèche-cheveux</label><br>
+            <label><input type="checkbox" name="Produits_et_service_de_base" value="Fer à repasser"> Fer à repasser</label>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <label>Caractéristiques :</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox" name="Caracteristiques" value="Piscine"> Piscine</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Jacuzzi"> Jacuzzi</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Parking-gratuit"> Parking-gratuit</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Station de recharge pour véhicules électriques"> Station de recharge pour véhicules électriques</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Lit pour bébé"> Lit pour bébé</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Lit king size"> Lit king size</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Salle de sport"> Salle de sport</label><br>              
+            <label><input type="checkbox" name="Caracteristiques" value="Barbecue"> Barbecue</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Petit déjeuner"> Petit déjeuner</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Cheminée"> Cheminée</label><br>
+            <label><input type="checkbox" name="Caracteristiques" value="Logement Fumeur"> Logement Fumeur</label>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <label>Emplacement :</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox" name="Emplacement" value="Bord de mer"> Bord de mer</label><br>
+            <label><input type="checkbox" name="Emplacement" value="Front de mer"> Front de mer</label><br>
+            <label><input type="checkbox" name="Emplacement" value="Montagne"> Montagne</label><br>
+            <label><input type="checkbox" name="Emplacement" value="Nébuleuse"> Nébuleuse</label>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <label>Sécurité :</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox" name="Securite" value="Détecteur de fumée"> Détecteur de fumée</label><br>
+            <label><input type="checkbox" name="Securite" value="Détecteur de monoxyde de carbone"> Détecteur de monoxyde de carbone</label><br>
+            <label><input type="checkbox" name="Securite" value="Caméra de sécurité"> Caméra de sécurité</label>
+          </div>
+        </div>
+      
+        <label>Elements d'accessibilité :</label>
+        
+        <div class="dropdown">
+          <label>Entrée et stationnement pour les voyageurs</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox" name="Entree_et_stationnement_pour_les_voyageurs" value="Accès de plain-pied"> Accès de plain-pied</label><br>
+            <label><input type="checkbox" name="Entree_et_stationnement_pour_les_voyageurs" value="Stationnement réservé aux personnes handicapées"> Stationnement réservé aux personnes handicapées</label><br>
+            <label><input type="checkbox" name="Entree_et_stationnement_pour_les_voyageurs" value="Largeur de l'entrée des voyageurs supérieure à 81 centimètres"> Largeur de l'entrée des voyageurs supérieure à 81 centimètres</label>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <label>Chambre</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox" name="Chambre1" value="Accès de plain-pied à la chambre"> Accès de plain-pied à la chambre</label><br>
+            <label><input type="checkbox" name="Chambre1" value="Largeur de l'entrée de la chambre supérieure à 81 centimètres"> Largeur de l'entrée de la chambre supérieure à 81 centimètres</label>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <label>Salle de bain</label>
+          <div class="dropdown-content">
+
+            <label><input type="checkbox" name="Salle_de_bain1" value="Accès de plain-pied à la salle de bains"> Accès de plain-pied à la salle de bains</label><br>
+            <label><input type="checkbox" name="Salle_de_bain1" value="Largeur de l'entrée de la salle de bain supérieure à 81 centimètres"> Largeur de l'entrée de la salle de bain supérieure à 81 centimètres</label><br>
+            <label><input type="checkbox" name="Salle_de_bain1" value="Barre d'appui pour toilettes"> Barre d'appui pour toilettes</label><br>
+            <label><input type="checkbox" name="Salle_de_bain1" value="Barre d'appui pour douche"> Barre d'appui pour douche</label><br>
+            <label><input type="checkbox" name="Salle_de_bain1" value="Douche de plain-pied"> Douche de plain-pied</label><br>
+            <label><input type="checkbox" name="Salle_de_bain1" value="Siège de douche ou de bain"> Siège de douche ou de bain</label>
+
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <label>Équipement d'accessibilité</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox" name="Equipement_d_accessibilite" value="Lève-personne mobile ou fixé au plafond"> Lève-personne mobile ou fixé au plafond</label>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <label>Langue de l'hote</label>
+          <div class="dropdown-content">
+
+            <label><input type="checkbox" name="langue" value="Français"> Français</label><br>
+            <label><input type="checkbox" name="langue" value="Italien"> Italien</label><br>
+            <label><input type="checkbox" name="langue" value="Espagnol"> Espagnol</label><br>
+            <label><input type="checkbox" name="langue" value="Allemand"> Allemand</label><br>
+            <label><input type="checkbox" name="langue" value="Latin"> Latin</label><br>
+            <label><input type="checkbox" name="langue" value="Grec"> Grec</label><br>
+            <label><input type="checkbox" name="langue" value="Anglais"> Anglais</label><br>
+            <label><input type="checkbox" name="langue" value="Valérien"> Valérien</label><br>
+            <label><input type="checkbox" name="langue" value="Klingon"> Klingon</label><br>
+            <label><input type="checkbox" name="langue" value="Russe"> Russe</label>
+
+          </div>
+        </div>
+
+        <button type="submit">Filtrer</button>
+      </form>
+        
     </section>
     <main id="video-section">
         <div class="section-logement">
