@@ -8,6 +8,29 @@
 <body>
     <h1><%= logement.titre %></h1>
     <p><%= logement.ville %></p>
+    <!-- Feuille de style Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Script JavaScript Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <div id="map" style="height: 400px;"></div>
+
+    <script>
+      // Crée une carte centrée sur Paris avec un zoom de 13
+      const map = L.map('map').setView([48.8566, 2.3522], 13);
+
+      // Charge les tuiles depuis OpenStreetMap
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+      }).addTo(map);
+
+      // Ajoute un marqueur avec un popup
+      L.marker([48.8566, 2.3522])
+        .addTo(map)
+        .bindPopup('Nous sommes à Paris.')
+        .openPopup();
+    </script>
+
+
     <a href="/">Retour à l'accueil</a>
 </body>
 </html>
