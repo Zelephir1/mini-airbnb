@@ -58,7 +58,7 @@ router.get('/', function(req, res) {
   logementsFiltres = filtrerCheckbox(logementsFiltres, 'Equipement_d_accessibilite', Equipement_d_accessibilite);
   logementsFiltres = filtrerCheckbox(logementsFiltres, 'langue', langue);
 
-  // Filtres supplémentaires
+  // Filtres supplémentaires sans checkbox
   if (ville && ville.trim() !== '') {
     logementsFiltres = logementsFiltres.filter(l => l.ville.toLowerCase() === ville.toLowerCase());
   }
