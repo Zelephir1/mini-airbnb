@@ -20,7 +20,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Latin','Français']
+      langue: ['Latin','Français'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 2,
@@ -43,7 +45,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Espagnol']
+      langue: ['Espagnol'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 3,
@@ -66,7 +70,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Grec']
+      langue: ['Grec'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 4,
@@ -89,7 +95,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Allemand','Français','Latin']
+      langue: ['Allemand','Français','Latin'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 5,
@@ -112,7 +120,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Valérien']
+      langue: ['Valérien'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 6,
@@ -135,7 +145,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Italien','Français']
+      langue: ['Italien','Français'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 7,
@@ -158,7 +170,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres','Barre dappui pour toilettes','Barre d appui pour douche','Siège de douche ou de bain'],
       Equipement_d_accessibilite: [],
-      langue: ['Anglais','Russe']
+      langue: ['Anglais','Russe'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 8,
@@ -181,7 +195,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Valérien','Anglais']
+      langue: ['Valérien','Anglais'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 9,
@@ -204,7 +220,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Anglais']
+      langue: ['Anglais'],
+      lat: 48.8566,
+      lon: 2.3522
     },
     {
       id: 10,
@@ -227,7 +245,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Français','Italien','Espagnol','Anglais']
+      langue: ['Français','Italien','Espagnol','Anglais'],
+      lat: 34.836996652,
+      lon: 134.689663908
     },
     {
       id: 11,
@@ -250,7 +270,10 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains'],
       Equipement_d_accessibilite: [],
-      langue: ['Klingon','Russe']
+      langue: ['Klingon','Russe'],
+      lat: 48.8566,
+      lon: 2.3522
+
     },
     {
       id: 12,
@@ -273,7 +296,9 @@ const logementAccueil = [
       Chambre1: ['Accès plain-pied à la chambre', 'Largeur de l entrée de la chambre supérieure à 81 centimètres'],
       Salle_de_bain1: ['Douche de plain-pied','Accès de plain pied à la salle de bains','Largeur de l entrée de la salle bain supérieure à 81 centimètres'],
       Equipement_d_accessibilite: [],
-      langue: ['Allemand']
+      langue: ['Allemand'],
+      lat: 48.8566,
+      lon: 2.3522
     },
   ];
   
