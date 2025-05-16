@@ -1,24 +1,21 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <nav>
-      <div id="youtube-logo-container"></div>
-      <input type="text"
-             placeholder="Search"
-             id="search-bar">
-      <div id="icon-container">
-          <i class="material-icons"
-             id="app-icon">&#xe5c3;
-          </i>
-          <i class="fas fa-bell"></i>
-      </div>
-    </nav>
-    <section id="side-bar-section">
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <h1>Multiverse Hotel</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside id="side-bar-section">
       <form method="GET" action="/">
+        <h2>Filtres</h2>
         <label>Ville :</label>
         <select name="ville">
             <option value="">Toutes</option>
@@ -88,9 +85,9 @@
 
         <label>Equipements :</label>
 
-        <div class="dropdown">
-          <label>Produits et service de base :</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Produits et service de base :</button>
+          <div class="filter-content">
             <label><input type="checkbox" name="Produits_et_service_de_base" value="Wifi"> Wifi</label><br>
             <label><input type="checkbox" name="Produits_et_service_de_base" value="Cuisine"> Cuisine</label><br>
             <label><input type="checkbox" name="Produits_et_service_de_base" value="Lave-linge"> Lave-linge</label><br>
@@ -104,9 +101,9 @@
           </div>
         </div>
 
-        <div class="dropdown">
-          <label>Caractéristiques :</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Caractéristiques :</button>
+          <div class="filter-content">
             <label><input type="checkbox" name="Caracteristiques" value="Piscine"> Piscine</label><br>
             <label><input type="checkbox" name="Caracteristiques" value="Jacuzzi"> Jacuzzi</label><br>
             <label><input type="checkbox" name="Caracteristiques" value="Parking-gratuit"> Parking-gratuit</label><br>
@@ -121,9 +118,9 @@
           </div>
         </div>
 
-        <div class="dropdown">
-          <label>Emplacement :</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Emplacement :</button>
+          <div class="filter-content">
             <label><input type="checkbox" name="Emplacement" value="Bord de mer"> Bord de mer</label><br>
             <label><input type="checkbox" name="Emplacement" value="Front de mer"> Front de mer</label><br>
             <label><input type="checkbox" name="Emplacement" value="Montagne"> Montagne</label><br>
@@ -131,9 +128,9 @@
           </div>
         </div>
 
-        <div class="dropdown">
-          <label>Sécurité :</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Sécurité :</button>
+          <div class="filter-content">
             <label><input type="checkbox" name="Securite" value="Détecteur de fumée"> Détecteur de fumée</label><br>
             <label><input type="checkbox" name="Securite" value="Détecteur de monoxyde de carbone"> Détecteur de monoxyde de carbone</label><br>
             <label><input type="checkbox" name="Securite" value="Caméra de sécurité"> Caméra de sécurité</label>
@@ -142,26 +139,26 @@
       
         <label>Elements d'accessibilité :</label>
         
-        <div class="dropdown">
-          <label>Entrée et stationnement pour les voyageurs</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Entrée et stationnement pour les voyageurs</button>
+          <div class="filter-content">
             <label><input type="checkbox" name="Entree_et_stationnement_pour_les_voyageurs" value="Accès de plain-pied"> Accès de plain-pied</label><br>
             <label><input type="checkbox" name="Entree_et_stationnement_pour_les_voyageurs" value="Stationnement réservé aux personnes handicapées"> Stationnement réservé aux personnes handicapées</label><br>
             <label><input type="checkbox" name="Entree_et_stationnement_pour_les_voyageurs" value="Largeur de l entrée des voyageurs supérieure à 81 centimètres"> Largeur de l'entrée des voyageurs supérieure à 81 centimètres</label>
           </div>
         </div>
 
-        <div class="dropdown">
-          <label>Chambre</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Chambre</button>
+          <div class="filter-content">
             <label><input type="checkbox" name="Chambre1" value="Accès de plain-pied à la chambre"> Accès de plain-pied à la chambre</label><br>
             <label><input type="checkbox" name="Chambre1" value="Largeur de l entrée de la chambre supérieure à 81 centimètres"> Largeur de l'entrée de la chambre supérieure à 81 centimètres</label>
           </div>
         </div>
 
-        <div class="dropdown">
-          <label>Salle de bain</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Salle de bain</button>
+          <div class="filter-content">
 
             <label><input type="checkbox" name="Salle_de_bain1" value="Accès de plain-pied à la salle de bains"> Accès de plain-pied à la salle de bains</label><br>
             <label><input type="checkbox" name="Salle_de_bain1" value="Largeur de l entrée de la salle de bain supérieure à 81 centimètres"> Largeur de l'entrée de la salle de bain supérieure à 81 centimètres</label><br>
@@ -173,16 +170,16 @@
           </div>
         </div>
 
-        <div class="dropdown">
-          <label>Équipement d'accessibilité</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Équipement d'accessibilité</button>
+          <div class="filter-content">
             <label><input type="checkbox" name="Equipement_d_accessibilite" value="Lève-personne mobile ou fixé au plafond"> Lève-personne mobile ou fixé au plafond</label>
           </div>
         </div>
       
-        <div class="dropdown">
-          <label>Langue de l'hote</label>
-          <div class="dropdown-content">
+        <div class="filter-group">
+          <button type="button" class="filter-toggle">Langue de l'hote</button>
+          <div class="filter-content">
 
             <label><input type="checkbox" name="langue" value="Français"> Français</label><br>
             <label><input type="checkbox" name="langue" value="Italien"> Italien</label><br>
@@ -197,45 +194,45 @@
 
           </div>
         </div>
-
-        <button type="submit">Filtrer</button>
+        <button class="styled" type="submit">Filtrer</button>
       </form>
-        
-    </section>
+    </aside>
+
     <main id="video-section">
-        <div class="section-logement">
-            <% logementAccueil.forEach(logement => { %>
-              <div class="logement">
-                <img src="<%= logement.image %>" class="images" alt="<%= logement.titre %>">
-                
-                <div class="offre-logement">
-                  <div class="details-logement">
-                    <a href="/logement/<%= logement.id %>" class="titre-logement">
-                      <%= logement.titre %>
-                    </a>
-                    <a href="/logement/<%= logement.id %>" class="hote-logement">
-                      <%= logement.hote %>
-                    </a>
-                    <a href="/logement/<%= logement.id %>" class="disponibilite-logement">
-                      <%= logement.disponibilite %>
-                    </a>
-                    <a href="/logement/<%= logement.id %>" class="prix-logement">
-                      <%= logement.prix %> &euro; par nuit
-                    </a>
-                  </div>
-                  <div class="note-logement">
-                    <p>&#9733;<%= logement.note %></p>
-                  </div>
-                </div>
+      <div class="section-logement">
+        <% logementAccueil.forEach(logement => { %>
+          <div class="logement">
+            <img src="<%= logement.image %>" class="images" alt="<%= logement.titre %>">
+            <div class="offre-logement">
+              <div class="details-logement">
+                <a href="/logement/<%= logement.id %>" class="titre-logement">
+                  <%= logement.titre %>
+                </a>
+                <span class="hote-logement"><%= logement.hote %></span>
+                <span class="disponibilite-logement"><%= logement.disponibilite %></span>
+                <span class="prix-logement"><%= logement.prix %> € / nuit</span>
               </div>
-            <% }) %>
-        </div>                            
+              <div class="note-logement">
+                <p>&#9733;<%= logement.note %></p>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
     </main>
+  </div>
+
   <footer>
-    <p>
-        This project is a cloned work and
-        a recreation of YouTube's design
-    </p>
-  </footer>      
-  </body>
+    <p>&copy; 2025 Multiverse Hotel — Tous droits réservés</p>
+  </footer>
+  <script>
+    document.querySelectorAll('.filter-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+</body>
 </html>

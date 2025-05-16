@@ -1,18 +1,29 @@
-<!-- logement.ejs -->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Page de Logement</title>
+  <title><%= logement.titre %> | Multiverse Hotel</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <style>
-    #map { height: 500px; margin-bottom: 20px; }
-  </style>
 </head>
 <body>
-    <h1><%= logement.titre %></h1>
-    <p><%= logement.ville %></p>
+  <header class="site-header">
+    <div class="logo-title">
+      <h1>Multiverse Hotel</h1>
+    </div>
+  </header>
+
+  <main class="logement-detail">
+    <h2><%= logement.titre %></h2>
+    <p><strong>Ville :</strong> <%= logement.ville %></p>
+    <img src="<%= logement.image %>" alt="<%= logement.titre %>" class="image-detail">
+    <p><strong>Hôte :</strong> <%= logement.hote %></p>
+    <p><strong>Disponibilité :</strong> <%= logement.disponibilite %></p>
+    <p><strong>Prix :</strong> <%= logement.prix %> € / nuit</p>
+    <p><strong>Note :</strong> &#9733;<%= logement.note %></p>
+
     <div id="map"></div>
 
     <script>
@@ -30,23 +41,17 @@
         const bounds = [[0, 0], [height, width]];
         L.imageOverlay("<%= logement.mapImage %>", bounds).addTo(map);
         map.fitBounds(bounds);
-
-        L.marker([<%= logement.lat %>, <%= logement.lon %>])
-          .addTo(map)
-          .bindPopup("<%= logement.titre %>");
+        L.marker([<%= logement.lat %>, <%= logement.lon %>]).addTo(map).bindPopup("<%= logement.titre %>");
       <% } else { %>
         const map = L.map('map').setView([<%= logement.lat %>, <%= logement.lon %>], 13);
-
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© OpenStreetMap contributors'
         }).addTo(map);
-
-        L.marker([<%= logement.lat %>, <%= logement.lon %>])
-          .addTo(map)
-          .bindPopup("<%= logement.titre %>");
+        L.marker([<%= logement.lat %>, <%= logement.lon %>]).addTo(map).bindPopup("<%= logement.titre %>");
       <% } %>
     </script>
 
-    <a href="/">Retour à l'accueil</a>
+    <a href="/" class="styled">Retour à l'accueil</a>
+  </main>
 </body>
 </html>
