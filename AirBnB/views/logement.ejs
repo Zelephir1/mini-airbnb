@@ -4,18 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Page de Logement</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    #map { height: 500px; margin-bottom: 20px; }
+  </style>
 </head>
 <body>
     <h1><%= logement.titre %></h1>
     <p><%= logement.ville %></p>
-    <!-- Feuille de style Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- Script JavaScript Leaflet -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <div id="map" style="height: 400px;"></div>
+    <div id="map"></div>
 
-    <% if (logement.lat && logement.lon) { %>
-      <script>
+    <script>
+      <% if (logement.mapType === "custom") { %>
+        const width = <%= logement.mapWidth %>;
+        const height = <%= logement.mapHeight %>;
+
+        const map = L.map('map', {
+          crs: L.CRS.Simple,
+          minZoom: -1,
+          maxZoom: 1,
+          center: [height / 2, width / 2]
+        });
+
+        const bounds = [[0, 0], [height, width]];
+        L.imageOverlay("<%= logement.mapImage %>", bounds).addTo(map);
+        map.fitBounds(bounds);
+
+        L.marker([<%= logement.lat %>, <%= logement.lon %>])
+          .addTo(map)
+          .bindPopup("<%= logement.titre %>");
+      <% } else { %>
         const map = L.map('map').setView([<%= logement.lat %>, <%= logement.lon %>], 13);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -25,12 +44,8 @@
         L.marker([<%= logement.lat %>, <%= logement.lon %>])
           .addTo(map)
           .bindPopup("<%= logement.titre %>");
-      </script>
-    <% } %>
-
-
-
-
+      <% } %>
+    </script>
 
     <a href="/">Retour à l'accueil</a>
 </body>

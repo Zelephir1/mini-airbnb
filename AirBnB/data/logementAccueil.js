@@ -22,7 +22,11 @@ const logementAccueil = [
       Equipement_d_accessibilite: [],
       langue: ['Latin','Français'],
       lat: 48.8566,
-      lon: 2.3522
+      lon: 2.3522,
+      mapType: "custom", // ou "classic" par défaut
+      mapImage: "/images/maps/warhammer.jpg",
+      mapWidth: 2000,
+      mapHeight: 1500
     },
     {
       id: 2,
@@ -47,7 +51,11 @@ const logementAccueil = [
       Equipement_d_accessibilite: [],
       langue: ['Espagnol'],
       lat: 48.8566,
-      lon: 2.3522
+      lon: 2.3522,
+      mapType: "custom", // ou "classic" par défaut
+      mapImage: "/images/maps/ds3.jpg",
+      mapWidth: 2000,
+      mapHeight: 1500
     },
     {
       id: 3,
@@ -72,7 +80,11 @@ const logementAccueil = [
       Equipement_d_accessibilite: [],
       langue: ['Grec'],
       lat: 48.8566,
-      lon: 2.3522
+      lon: 2.3522,
+      mapType: "custom", // ou "classic" par défaut
+      mapImage: "/images/maps/ds3.jpg",
+      mapWidth: 2000,
+      mapHeight: 1500
     },
     {
       id: 4,
@@ -97,7 +109,11 @@ const logementAccueil = [
       Equipement_d_accessibilite: [],
       langue: ['Allemand','Français','Latin'],
       lat: 48.8566,
-      lon: 2.3522
+      lon: 2.3522,
+      mapType: "custom", // ou "classic" par défaut
+      mapImage: "/images/maps/warhammer.jpg",
+      mapWidth: 2000,
+      mapHeight: 1500
     },
     {
       id: 5,
@@ -272,7 +288,11 @@ const logementAccueil = [
       Equipement_d_accessibilite: [],
       langue: ['Klingon','Russe'],
       lat: 48.8566,
-      lon: 2.3522
+      lon: 2.3522,
+      mapType: "custom", // ou "classic" par défaut
+      mapImage: "/images/maps/ds3.jpg",
+      mapWidth: 2000,
+      mapHeight: 1500
 
     },
     {
@@ -298,7 +318,11 @@ const logementAccueil = [
       Equipement_d_accessibilite: [],
       langue: ['Allemand'],
       lat: 48.8566,
-      lon: 2.3522
+      lon: 2.3522,
+      mapType: "custom", // ou "classic" par défaut
+      mapImage: "/images/maps/ds3.jpg",
+      mapWidth: 2000,
+      mapHeight: 1500
     },
   ];
   
