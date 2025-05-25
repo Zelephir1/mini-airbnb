@@ -1,0 +1,14 @@
+{
+    "github.copilot.exclude": [
+    "**/node_modules/**",
+    "**/public/**",
+    "**/*.min.js",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.gif",
+    "**/*.svg",
+    "**/*.ico"
+]
+
+}

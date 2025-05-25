@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title><%= listing.title %> - Mini-Airbnb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-btn">← Retour à l'accueil</a>
+
+        <div class="listing-detail">
+            <img src="/img/<%= encodeURIComponent(listing.image) %>" alt="<%= listing.title %>" class="detail-image">
+            <h1><%= listing.title %></h1>
+            <p class="price"><%= listing.price %> € / nuit</p>
+            <p class="description"><%= listing.description %></p>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script src="/js/main.js"></script>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        const coords = <%- JSON.stringify(listing.coords || [0, 0]) %>;
+
+        if (coords && coords.length === 2) {
+            const map = L.map('map').setView(coords, 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            L.marker(coords).addTo(map)
+                .bindPopup('<%= listing.title.replace(/'/g, "\\'") %>')
+                .openPopup();
+        } else {
+            console.error('Coordonnées invalides pour la carte.');
+        }
+    </script>
+</body>
+</html>

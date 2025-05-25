@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini-Airbnb</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container">
+        <% if (listings.length === 0) { %>
+            <p>Aucun résultat trouvé pour votre recherche.</p>
+        <% } else { %>
+            <div class="listings-grid">
+                <% listings.forEach(listing => { %>
+                    <a href="/listing/<%= listing.id %>" class="listing-card">
+                        <img src="/img/<%= listing.image %>" alt="<%= listing.title %>">
+                        <h2><%= listing.title %></h2>
+                        <p><%= listing.price %> € / nuit</p>
+                    </a>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>
